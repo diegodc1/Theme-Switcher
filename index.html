@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme Switcher</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon/android-chrome-192x192.png"
+    />
+    <meta name="description" content="Switcher de modo dark e light" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <main>
+      <div class="change-color" id="change-color2">
+        <h1 class="title" id="title">Theme Switcher</h1>
+        <h2 class="light-mode" id="light-mode">Light Mode</h2>
+        <h2 class="dark-mode invisible" id="dark-mode">Dark Mode</h2>
+        <button id="button" type="button" class="dark">
+          <img src="./assets/images/sun.svg" alt="Icone de um Sol" />
+          <img src="./assets/images/moon.svg" alt="Icone de uma Lua" />
+          <div class="circle dark" id="circle-transition"></div>
+        </button>
+      </div>
+    </main>
+    <footer>
+      <div class="author" id="author">
+        <p>
+          Feito com
+          <img src="./assets/images/emoji.png" alt="Coração Laranja" /> by Diego
+          Alves
+        </p>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
