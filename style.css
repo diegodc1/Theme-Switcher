@@ -2,7 +2,6 @@
   --dark: #292c35;
   --light: #f1f1f1;
   --label: #111;
-  /* font-family: 'Dongle', sans-serif; */
 }
 
 html {
@@ -11,20 +10,43 @@ html {
 
 * {
   margin: 0;
+  font-family: 'Dongle', sans-serif;
 }
 
-.body {
+.change-color {
   display: flex;
+  position: absolute;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
+
+  background-color: #e8e8e8;
+  transition: all 0.4s ease-in-out;
 }
 
+.change-color.dark {
+  background-color: var(--dark);
+}
+
+/* Titulo */
+.title {
+  position: absolute;
+  margin-bottom: 55rem;
+  font-size: 14rem;
+
+  transition: all 0.4s ease-in-out;
+  color: var(--dark);
+}
+
+.title.dark {
+  color: white;
+}
+
+/* Button */
 button {
   background-color: var(--label);
-
   height: 6rem;
   width: 15rem;
 
@@ -41,68 +63,35 @@ button img {
   width: 9rem;
 }
 
-/*** Button change ***/
-button .circle {
-  position: absolute;
-  margin-left: 8.5rem;
+button:hover {
+  cursor: pointer;
+}
 
+/*** Button white ball ***/
+.circle {
+  position: absolute;
   border-style: none;
   background-color: white;
-
   width: 5rem;
   height: 5rem;
   border-radius: 999px;
+  transition: all 0.3s ease-in-out;
+
+  margin-left: 8.5rem;
 }
 
 .circle.dark {
   margin-right: 17.4rem;
-
-  border-style: none;
-  background-color: white;
-
-  width: 5rem;
-  height: 5rem;
-  border-radius: 999px;
 }
 
-.change-color {
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-
-  background-color: #e8e8e8;
+/*** Texto em cima do botao **/
+.mode-select {
+  font-size: 3rem;
+  color: #f1c40f;
   transition: all 0.4s ease-in-out;
 }
 
-/*** Dark Background ***/
-.change-color.dark {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-
-  background-color: var(--dark);
-}
-
-#circle-transition {
-  transition: all 0.3s ease-in-out;
-}
-
-h1 {
-  position: absolute;
-  margin-bottom: 55rem;
-
-  font-size: 14rem;
-  font-family: "Dongle", sans-serif;
-  color: var(--dark);
-  transition: all 0.4s ease-in-out;
-}
-
+/* Footer  */
 footer {
   width: 100vw;
   display: flex;
@@ -117,9 +106,8 @@ footer p {
   justify-content: center;
   align-items: center;
 
-  font-family: "Dongle", sans-serif;
-  font-size: 2.5rem;
   line-height: 0;
+  font-size: 2.5rem;
   transition: all 0.4s ease-in-out;
   color: var(--dark);
 }
@@ -128,50 +116,14 @@ footer img {
   justify-content: center;
   align-items: center;
   line-height: 0;
+  margin-left: 0.5rem;
 
   height: 1.5rem;
 }
 
-.title.dark {
-  position: absolute;
-  margin-bottom: 55rem;
-  color: white;
-
-  font-size: 14rem;
-  font-family: "Dongle", sans-serif;
-  transition: all 0.4s ease-in-out;
-}
-
 .author.dark p {
-  justify-content: center;
-  align-items: center;
-
-  font-family: "Dongle", sans-serif;
-  font-size: 2.5rem;
   color: white;
-  transition: all 0.4s ease-in-out;
-}
-
-/*** Modes Message***/
-
-.light-mode,
-.dark-mode {
-  font-size: 3rem;
-  font-family: "Dongle", sans-serif;
-  color: #f1c40f;
-  transition: all 0.4s ease-in-out;
-}
-
-.light-mode.invisible,
-.dark-mode.invisible {
-  opacity: 0;
-  transition: all 0.4s ease-in-out;
-}
-
-.light-mode,
-.light-mode.invisible {
-  position: absolute;
-  margin-bottom: 6rem;
+  font-size: 2.5rem;
 }
 
 @media only screen and (max-width: 426px) {
